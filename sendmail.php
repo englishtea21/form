@@ -11,11 +11,11 @@
 	$mail->IsHTML(true);
 
 	//от кого письмо
-	$mail->setForm('englishtea21@mail.ru', 'Английский чай');
+	$mail->setFrom('englishtea21@mail.ru', 'Английский чай');
 	//кому отправить
-	$mail->addAddress('liskirill37@gmail.com');
+	$mail->addAddress('englishtea21@mail.ru');
 	//Тема письма
-	$mail->Subject = 'Шабат шалом';
+	$mail->Subject = '<h1>Вам письмо с <strong>формы</strong></h1>';
 
 	//рука
 	$hand = "Правая";
@@ -27,19 +27,19 @@
 	$body = '<h1>Супер-шмупер письмо</h1>';
 
 	if(trim(!empty($_POST['name']))){
-		$body.='<p><strong>Имя:</strong> ' .$_POST['name'].'</p>';
+		$body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
 	}
 	if(trim(!empty($_POST['email']))){
-		$body.='<p><strong>E-mail:</strong> ' .$_POST['email'].'</p>';
+		$body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
 	}
 	if(trim(!empty($_POST['hand']))){
-		$body.='<p><strong>Рука:</strong> ' .$hand.'</p>';
+		$body.='<p><strong>Рука:</strong> '.$hand.'</p>';
 	}
 	if(trim(!empty($_POST['age']))){
-		$body.='<p><strong>Возраст:</strong> ' .$_POST['age'].'</p>';
+		$body.='<p><strong>Возраст:</strong> '.$_POST['age'].'</p>';
 	}
 	if(trim(!empty($_POST['message']))){
-		$body.='<p><strong>Сообщение:</strong> ' .$_POST['message'].'</p>';
+		$body.='<p><strong>Сообщение:</strong> '.$_POST['message'].'</p>';
 	}
 
 	//прикрепить файл
