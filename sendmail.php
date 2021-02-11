@@ -24,7 +24,7 @@
 	}
 
 	//Тело письма
-	$body = '<h1>Супер-шмупер письмо</h1>';
+	$body = '<h1>Нам письмо прислали</h1>';
 
 	if(trim(!empty($_POST['name']))){
 		$body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
@@ -49,7 +49,7 @@
 		//грузим файл
 		if(copy($_FILES['image']['tmp_name'], $filePath)){
 			$fileAttach = $filePath;
-			$body.='<p><strong>Фото в приложении</strong></p>';
+// 			$body.='<p><strong>Фото в приложении</strong></p>';
 			$mail->addAttachment($fileAttach);
 		}
 	}
